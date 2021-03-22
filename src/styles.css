@@ -1,6 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~normalize.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-.titanic {
-  float: none;
+:root {
+  --color-headings: #101010;
+  --color-paragraphs: #5c5c5c;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background: #fafafa;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--color-paragraphs);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 500px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    margin-top: 0;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    margin-top: 0;
+    font-size: 16px;
+  }
 }

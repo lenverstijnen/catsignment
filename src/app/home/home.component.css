@@ -1,0 +1,30 @@
+.background-img {
+  background-image: url(../../assets/img/homebg/homebg-500w.jpg);
+  height: 500px;
+  background-position: center;
+  width: 100vw;
+  margin: 0 auto;
+  background-size: cover;
+  filter: brightness(120%);
+}
+
+@media screen and (min-width: 500px) {
+  .background-img {
+    background-image: url(../../assets/img/homebg/homebg-1200w.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .background-img {
+    background-image: url(../../assets/img/homebg/homebg-1600w.jpg);
+  }
+}
+
+.content-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h2 {
+  color: purple;
+}
