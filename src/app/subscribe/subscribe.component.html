@@ -1,1 +1,61 @@
-<p>subscribe works!</p>
+<div class="container">
+  <h1>Subscribe</h1>
+  <form autocomplete="off" [formGroup]="form" (ngSubmit)="handleSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="name"
+        class="form-control"
+        id="name"
+        formControlName="name"
+      />
+      <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+        <div *ngIf="name.errors?.required">Name is required.</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="breed" class="form-label">Breed</label>
+      <input
+        type="breed"
+        class="form-control"
+        id="breed"
+        formControlName="breed"
+      />
+      <div class="alert alert-danger" *ngIf="breed.touched && !breed.valid">
+        <div *ngIf="breed.errors?.required">Breed is required.</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+      <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+        <div *ngIf="email.errors?.required">Email is required.</div>
+        <div *ngIf="email.errors?.email">Enter a valid email</div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="hobbys" class="form-label">Hobbys</label>
+      <input
+        type="hobbys"
+        class="form-control"
+        id="hobbys"
+        formControlName="hobbys"
+      />
+      <div class="alert alert-danger" *ngIf="hobbys.touched && !hobbys.valid">
+        <div *ngIf="hobbys.errors?.required">Hobbys is required.</div>
+      </div>
+    </div>
+
+    <div class="alert alert-danger mb-3" *ngIf="formError">
+      <div *ngIf="hobbys.errors?.required">Please fill in al form fields</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

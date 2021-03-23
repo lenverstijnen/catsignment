@@ -1,0 +1,23 @@
+.alert {
+  padding: 5px 20px;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 40px;
+  background: #006064;
+  outline: none;
+  border: none;
+  transition: 0.3s;
+  margin: 40px 0 0;
+}
+
+.btn:hover {
+  background: #00796b;
+}
+
+form {
+  padding: 50px;
+  background: #e0f2f1;
+  border-radius: 10px;
+}
