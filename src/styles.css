@@ -2,6 +2,7 @@
 @import "~normalize.css";
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
   --color-headings: #101010;

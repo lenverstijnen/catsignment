@@ -8,6 +8,7 @@ import { CatfeedComponent } from './catfeed/catfeed.component';
 import { BreedsearchComponent } from './breedsearch/breedsearch.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeComponent } from './home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     CatfeedComponent,
     BreedsearchComponent,
     SubscribeComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
