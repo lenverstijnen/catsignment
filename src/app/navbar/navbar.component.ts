@@ -7,7 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  open = false;
+
+  // The implementation could be better, for example by adding a backdrop with click listener to close the mobile menu.
+  // I've chosen to focus on other things, maybe come back later to it.
+  handleOpen() {
+    this.open = !this.open;
+  }
 
   ngOnInit(): void {}
 }

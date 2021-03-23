@@ -2,6 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Catship</a>
     <button
+      (click)="handleOpen()"
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
@@ -27,3 +28,36 @@
     </div>
   </div>
 </nav>
+
+<div>
+  <div *ngIf="this.open" class="mobile-nav bg-dark">
+    <a
+      (click)="handleOpen()"
+      class="nav-link"
+      routerLinkActive="active"
+      routerLink="/"
+      >Home</a
+    >
+    <a
+      (click)="handleOpen()"
+      class="nav-link"
+      routerLinkActive="active"
+      routerLink="/cats"
+      >Feed</a
+    >
+    <a
+      (click)="handleOpen()"
+      class="nav-link"
+      routerLinkActive="active"
+      routerLink="/breed"
+      >Search Breed</a
+    >
+    <a
+      (click)="handleOpen()"
+      class="nav-link"
+      routerLinkActive="active"
+      routerLink="/subscribe"
+      >Subscribe</a
+    >
+  </div>
+</div>
