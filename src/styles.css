@@ -11,7 +11,6 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 
 #root {
@@ -21,7 +20,8 @@ html {
 body {
   height: 100%;
   font-family: "Inter", sans-serif;
-  background: #fafafa;
+  background: url(./assets/img/bg.png);
+
   font-size: 20px;
   line-height: 1.5;
   color: var(--color-paragraphs);
@@ -89,4 +89,16 @@ p {
     margin-top: 0;
     font-size: 16px;
   }
+}
+
+/* Boostrap Overrides */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-top: solid lightslategray;
+  border-bottom: solid lightslategray;
+  margin: 20px auto;
 }

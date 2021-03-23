@@ -9,6 +9,7 @@ import { BreedsearchComponent } from './breedsearch/breedsearch.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,10 @@ import { FooterComponent } from './footer/footer.component';
     BreedsearchComponent,
     SubscribeComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
