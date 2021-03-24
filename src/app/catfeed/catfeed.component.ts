@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CatService } from '../services/cat.service';
+import { config } from '../../config/config';
 
 @Component({
   selector: 'catfeed',
@@ -16,15 +17,18 @@ export class CatfeedComponent implements OnInit {
 
   constructor(private service: CatService) {}
 
+  // I didn't implement infinite scrolling before, even not in React. I came up with
+  // this solution myself. Better way would be probably server side pagination. Would dive deeper,
+  // but I think this is beyond the scope of what i can do for now. This works for now.
   loadMore() {
-    const more = this.fetchedCats.splice(0, 5);
+    const more = this.fetchedCats.splice(0, config.numberOfCatsToLoad);
     more.forEach((cat) => this.loadedCats.push(cat));
   }
 
   ngOnInit(): void {
     this.service.getCats().subscribe((response) => {
       this.fetchedCats = response;
-      this.loadedCats = this.fetchedCats.splice(0, 5);
+      this.loadedCats = this.fetchedCats.splice(0, config.numberOfCatsToLoad);
     });
   }
 }
