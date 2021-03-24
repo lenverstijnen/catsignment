@@ -1,3 +1,10 @@
 <div class="container">
   <h1>Cats</h1>
+
+  <div *ngFor="let cat of loadedCats">
+    <card url="{{ cat.url }}"></card>
+  </div>
+  <button [disabled]="isEmpty" (click)="loadMore()" class="btn btn-primary">
+    Load more
+  </button>
 </div>
