@@ -1,11 +1,31 @@
-<div class="card" style="width: 300px">
-  <img src="{{ url }}" class="card-img-top" alt="..." />
+<div class="card">
+  <div class="card-header">
+    <img class="img" src="{{ url }}" alt="..." />
+  </div>
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <span
+      *ngIf="catdetails.likesWater"
+      class="badge rounded-pill bg-danger"
+      role="alert"
+    >
+      This Cat Likes Water!
+    </span>
+    <h5 class="card-title">{{ catdetails.name }}</h5>
+    <p><strong>Age: </strong>{{ catdetails.age }}</p>
     <p class="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      <strong>Likes: </strong>
+      <span *ngFor="let like of catdetails.likes; last as isLast"
+        >{{ like | titlecase }}<span *ngIf="!isLast">, </span>
+      </span>
+      <br />
+      <strong>Hates: </strong>
+      <span *ngFor="let hate of catdetails.hates; last as isLast"
+        >{{ hate | titlecase }}<span *ngIf="!isLast">, </span>
+      </span>
     </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+    <a (click)="handleContact(catdetails.name)" class="btn btn-outline-primary"
+      >Contact {{ catdetails.name }}</a
+    >
   </div>
 </div>
