@@ -10,6 +10,8 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +22,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SubscribeComponent,
     HomeComponent,
     FooterComponent,
+    CardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
