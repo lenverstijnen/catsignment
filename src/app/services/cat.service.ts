@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { of } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 type Response = {
   breeds: any[];
@@ -22,9 +24,11 @@ export class CatService {
   constructor(private http: HttpClient) {}
 
   getCats() {
-    return this.http.get<Response>(
-      'https://api.thecatapi.com/v1/images/search?size=med&limit=100',
-      this.opts
-    );
+    return this.http
+      .get<Response>(
+        'https://api.thecatapi.com/v1/images/search?size=med&limit=100',
+        this.opts
+      )
+      .pipe(catchError((e) => of(console.log(e))));
   }
 }

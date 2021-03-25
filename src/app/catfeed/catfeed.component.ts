@@ -27,6 +27,7 @@ export class CatfeedComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getCats().subscribe((response) => {
+      if (!response) return;
       this.fetchedCats = response;
       this.loadedCats = this.fetchedCats.splice(0, config.numberOfCatsToLoad);
     });
