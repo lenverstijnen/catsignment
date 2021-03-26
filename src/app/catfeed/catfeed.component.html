@@ -1,6 +1,8 @@
 <div class="container">
   <h1>Cats</h1>
 
+  <spinner [loading]="loading"></spinner>
+
   <div *ngFor="let cat of loadedCats">
     <card url="{{ cat.url }}"></card>
   </div>

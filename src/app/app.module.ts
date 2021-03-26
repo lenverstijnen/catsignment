@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './card/card.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { CardComponent } from './card/card.component';
     HomeComponent,
     FooterComponent,
     CardComponent,
+    SpinnerComponent,
+    PrettyJsonPipe,
   ],
   imports: [
     BrowserModule,

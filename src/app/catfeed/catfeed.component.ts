@@ -10,6 +10,7 @@ import { config } from '../../config/config';
 export class CatfeedComponent implements OnInit {
   fetchedCats: any[] = [];
   loadedCats: any[] = [];
+  loading = false;
 
   get isEmpty() {
     return this.fetchedCats.length === 0;
@@ -26,8 +27,10 @@ export class CatfeedComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.service.getCats().subscribe((response) => {
-      if (!response) return;
+    this.service.getCats().subscribe((res) => {
+      if (!res) return;
+      const { response, loading } = res;
+      this.loading = loading;
       this.fetchedCats = response;
       this.loadedCats = this.fetchedCats.splice(0, config.numberOfCatsToLoad);
     });
