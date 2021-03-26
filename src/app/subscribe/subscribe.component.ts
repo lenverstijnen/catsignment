@@ -7,6 +7,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./subscribe.component.css'],
 })
 export class SubscribeComponent {
+  submitValue = {};
   formError = false;
   form = new FormGroup({
     name: new FormControl('', Validators.required),
@@ -18,15 +19,22 @@ export class SubscribeComponent {
   constructor() {}
 
   handleSubmit() {
-    console.log(this.form);
+    if (this.form.invalid) {
+      this.formError = true;
+      return;
+    } else {
+      this.formError = false;
+      this.submitValue = this.form.value;
+    }
+  }
 
-    // if (this.form.invalid) {
-    //   this.formError = true;
-    //   return;
-    // } else {
-    //   console.log(this.form.value);
-    //   this.form.reset();
-    // }
+  handleReset() {
+    this.submitValue = {};
+    this.form.reset();
+  }
+
+  get isSubmitted() {
+    return !!Object.keys(this.submitValue).length;
   }
 
   get breed() {

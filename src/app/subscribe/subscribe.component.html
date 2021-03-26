@@ -53,9 +53,14 @@
     </div>
 
     <div class="alert alert-danger mb-3" *ngIf="formError">
-      <div *ngIf="hobbys.errors?.required">Please fill in al form fields</div>
+      <div>Please fill in al form fields</div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary button">Submit</button>
   </form>
+
+  <div *ngIf="isSubmitted">
+    <pre class="output">{{ submitValue | prettyJson }}</pre>
+    <button (click)="handleReset()" class="btn btn-danger">Reset Form</button>
+  </div>
 </div>

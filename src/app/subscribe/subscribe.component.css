@@ -2,7 +2,7 @@
   padding: 5px 20px;
 }
 
-.btn {
+.button {
   width: 100%;
   border-radius: 40px;
   background: #006064;
@@ -20,4 +20,11 @@ form {
   padding: 50px;
   background: #e0f2f1;
   border-radius: 10px;
+}
+
+.output {
+  margin: 20px 0;
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
 }
