@@ -103,3 +103,8 @@ export class CatCharacteristicsService {
     return this.cats[index];
   }
 }
+
+// I build this service to provide some characteristics for the feed. The only
+// fun part is the fact that it does't return the same object twice in a row.
+// But the main purpose was to have some dummy data and being able to provide
+// it on the fly.

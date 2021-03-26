@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -53,3 +53,7 @@ export class SubscribeComponent {
     return this.form.get('hobbys')!;
   }
 }
+
+// Of course this form doesn't do anything usefull, but i implemented a Reactive
+// Form and added some validation. Everything could be better and more proffessional of
+// course. I really like the fact that all of this works out of the box in Angular.

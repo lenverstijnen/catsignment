@@ -71,7 +71,7 @@ export class CatService {
       .pipe(
         map((response) => ({ loading: false, response })),
         startWith({ loading: true, response: [] }),
-        catchError((e) => of(console.log(e)))
+        catchError((e) => of(alert(e)))
       );
   }
 
@@ -85,7 +85,12 @@ export class CatService {
         delay(500),
         map((response) => ({ loading: false, response })),
         startWith({ loading: true, response: [] }),
-        catchError((e) => of(console.log(e)))
+        catchError((e) => of(alert(e)))
       );
   }
 }
+
+// In a bigger project I would probably build an api service that could handle all the CRUD operations.
+// I didn't dive deep into error handling in Angular but saw there is a class ErrorHandler where you should implement
+// handleError(). There I should probably call the logger, and notify the user. Of course alert() is not used for
+// this in real situations.

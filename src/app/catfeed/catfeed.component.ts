@@ -18,9 +18,6 @@ export class CatfeedComponent implements OnInit {
 
   constructor(private service: CatService) {}
 
-  // I didn't implement infinite scrolling before, even not in React. I came up with
-  // this solution myself. Better way would be probably server side pagination. Would dive deeper,
-  // but I think this is beyond the scope of what i can do for now. This works for now.
   loadMore() {
     const more = this.fetchedCats.splice(0, config.numberOfCatsToLoad);
     more.forEach((cat) => this.loadedCats.push(cat));
@@ -36,3 +33,7 @@ export class CatfeedComponent implements OnInit {
     });
   }
 }
+
+// I didn't implement infinite scrolling before, even not in React. I came up with
+// this solution myself. Better way would be probably server side pagination. Would dive deeper,
+// but I think this is beyond the scope of what i can do for now. This works for now.

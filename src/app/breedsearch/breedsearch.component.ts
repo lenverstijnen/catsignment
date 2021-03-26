@@ -48,9 +48,16 @@ export class BreedsearchComponent implements OnInit {
       this.results = response;
       console.log(response);
       this.isSubmitted = true;
-      console.log(response);
     });
   }
 
   ngOnInit(): void {}
 }
+
+// I think most of this speaks for itself. It is a simple implementation of
+// the search breed by name feature. I do not spam the api too much because you
+// have to submit before the request is sent. I know in Axios you can send the request
+// when finished typing and cancel it while typing to not spam the api to much. I suppose
+// there will be a simular feature in RxJS but didn't dive into it because of the
+// time management. So I realize other implementations would be possible and probably
+// be better.
