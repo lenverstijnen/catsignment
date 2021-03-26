@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './card/card.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
+import { BreedDetailsComponent } from './breed-details/breed-details.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
     CardComponent,
     SpinnerComponent,
     PrettyJsonPipe,
+    BreedDetailsComponent,
   ],
   imports: [
     BrowserModule,

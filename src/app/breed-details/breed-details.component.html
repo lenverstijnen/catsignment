@@ -1,0 +1,29 @@
+<div class="card root" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ breedDetails.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      {{ breedDetails.temperament }}
+    </h6>
+    <p class="card-text">
+      {{ breedDetails.description }}
+    </p>
+
+    <ul class="list-group list-group-flush m-3">
+      <li class="list-group-item">
+        <strong>Origin: </strong>{{ breedDetails.origin }}
+      </li>
+      <li class="list-group-item">
+        <strong>Weight: </strong>{{ breedDetails.weight.metric }}kg
+      </li>
+      <li class="list-group-item">
+        <strong>Intelligence: </strong>{{ breedDetails.intelligence }}/5
+      </li>
+      <li class="list-group-item">
+        <strong>Affection level: </strong>{{ breedDetails.affection_level }}/5
+      </li>
+    </ul>
+
+    <a href="{{ breedDetails.wikipedia_url }}" class="card-link">WikiPedia</a>
+    <a href="{{ breedDetails.vetstreet_url }}" class="card-link">VetStreet</a>
+  </div>
+</div>

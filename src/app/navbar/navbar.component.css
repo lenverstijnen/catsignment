@@ -3,7 +3,7 @@
 }
 
 .mobile-nav {
-  z-index: 1;
+  z-index: 9999;
   padding: 40px;
   position: absolute;
   top: 0;

@@ -1,1 +1,29 @@
-<div class="container"><h1>Search</h1></div>
+<div class="container">
+  <h1>Search</h1>
+  <form autocomplete="off" (ngSubmit)="handleSearch(searchField.value)">
+    <div class="input-group">
+      <input
+        (keyup)="handleChange($event)"
+        name="searchValue"
+        ngModel
+        #searchField
+        type="text"
+        class="form-control"
+        placeholder="Search..."
+      />
+      <button
+        (click)="handleSearch(searchField.value)"
+        class="btn btn-primary"
+        type="button"
+      >
+        Search breed<i class="bi bi-search"></i>
+      </button>
+    </div>
+  </form>
+  <spinner [loading]="loading"></spinner>
+  <div class="alert alert-warning" *ngIf="noResult">No Results...</div>
+  <breed-details
+    *ngFor="let breedDetails of results"
+    [breedDetails]="breedDetails"
+  ></breed-details>
+</div>

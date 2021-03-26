@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CatService } from '../services/cat.service';
+import { CatService, IImageResponse } from '../services/cat.service';
 import { config } from '../../config/config';
 
 @Component({
@@ -8,8 +8,8 @@ import { config } from '../../config/config';
   styleUrls: ['./catfeed.component.css'],
 })
 export class CatfeedComponent implements OnInit {
-  fetchedCats: any[] = [];
-  loadedCats: any[] = [];
+  fetchedCats: IImageResponse[] = [];
+  loadedCats: IImageResponse[] = [];
   loading = false;
 
   get isEmpty() {
