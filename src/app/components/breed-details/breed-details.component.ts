@@ -1,6 +1,5 @@
-import { style } from '@angular/animations';
-import { Component, Input, OnInit } from '@angular/core';
-import { IBreedResponse } from '../services/cat.service';
+import { Component, Input } from '@angular/core';
+import { IBreedResponse } from '../../services/cat.service';
 
 @Component({
   selector: 'breed-details',

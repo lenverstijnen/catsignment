@@ -6,5 +6,3 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {}
-
-// No logic here and not mutch to explain.

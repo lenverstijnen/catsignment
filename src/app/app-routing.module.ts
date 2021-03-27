@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CatfeedComponent } from './catfeed/catfeed.component';
-import { BreedsearchComponent } from './breedsearch/breedsearch.component';
-import { SubscribeComponent } from './subscribe/subscribe.component';
-import { HomeComponent } from './home/home.component';
+import { CatfeedComponent } from './components//catfeed/catfeed.component';
+import { BreedsearchComponent } from './components//breedsearch/breedsearch.component';
+import { SubscribeComponent } from './components//subscribe/subscribe.component';
+import { HomeComponent } from './components//home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

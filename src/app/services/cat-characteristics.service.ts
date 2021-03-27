@@ -94,7 +94,7 @@ export class CatCharacteristicsService {
   getRandomCharacteristics() {
     let index = this.computeIndex();
 
-    // prevent returning the two of the same objects in rows
+    // Prevents returning the same obj two times in row
     while (this.previousCat === this.cats[index]) {
       index = this.computeIndex();
     }
@@ -104,7 +104,6 @@ export class CatCharacteristicsService {
   }
 }
 
-// I build this service to provide some characteristics for the feed. The only
-// fun part is the fact that it does't return the same object twice in a row.
-// But the main purpose was to have some dummy data and being able to provide
+// I build this service to provide some characteristics for the feed.
+// The main purpose was to have some dummy data and being able to provide
 // it on the fly.

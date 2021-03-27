@@ -11,5 +11,5 @@ export class PrettyJsonPipe implements PipeTransform {
 }
 
 // I found out about pipes and I really love them! Wow, nice feature of Angular
-// and quite powerfull. Of course this is a simple example, but just to point out
-// that I learned a bit about pipes.
+// and quite powerfull. This is a simple example, just to point out
+// that I learned about pipes, but I think there are plenty beautiful usecases.

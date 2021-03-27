@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { CatfeedComponent } from './catfeed/catfeed.component';
-import { BreedsearchComponent } from './breedsearch/breedsearch.component';
-import { SubscribeComponent } from './subscribe/subscribe.component';
-import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './components//navbar/navbar.component';
+import { CatfeedComponent } from './components/catfeed/catfeed.component';
+import { BreedsearchComponent } from './components/breedsearch/breedsearch.component';
+import { SubscribeComponent } from './components//subscribe/subscribe.component';
+import { HomeComponent } from './components//home/home.component';
+import { FooterComponent } from './components//footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CardComponent } from './card/card.component';
-import { SpinnerComponent } from './spinner/spinner.component';
+import { CardComponent } from './components//card/card.component';
+import { SpinnerComponent } from './components//spinner/spinner.component';
 import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
-import { BreedDetailsComponent } from './breed-details/breed-details.component';
+import { BreedDetailsComponent } from './components/breed-details/breed-details.component';
 
 @NgModule({
   declarations: [

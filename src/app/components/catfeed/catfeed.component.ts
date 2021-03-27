@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CatService, IImageResponse } from '../services/cat.service';
+import { CatService, IImageResponse } from '../../services/cat.service';
 import { config } from '../../config/config';
 
 @Component({
@@ -35,5 +35,6 @@ export class CatfeedComponent implements OnInit {
 }
 
 // I didn't implement infinite scrolling before, even not in React. I came up with
-// this solution myself. Better way would be probably server side pagination. Would dive deeper,
-// but I think this is beyond the scope of what i can do for now. This works for now.
+// this solution myself. Better way would be probably server side pagination, because of course
+// there are more than 100 cats to be found. But this mimics a bit of the functionality and
+// adds the feeling of infinite scrolling.

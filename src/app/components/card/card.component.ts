@@ -1,8 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   CatCharacteristicsService,
   ICatCharacteristics,
-} from '../services/cat-characteristics.service';
+} from '../../services/cat-characteristics.service';
 
 @Component({
   selector: 'card',
@@ -25,6 +25,3 @@ export class CardComponent {
     );
   }
 }
-
-// This is not an example of good practice, of course this compoment is not reusable by coupling the service
-// to this component. But for time management I've chosen to do it this way for now.

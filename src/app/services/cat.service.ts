@@ -71,7 +71,7 @@ export class CatService {
       .pipe(
         map((response) => ({ loading: false, response })),
         startWith({ loading: true, response: [] }),
-        catchError((e) => of(alert(e)))
+        catchError((e: Error) => of(alert(e.message))) // Normally i would log the error and do more then just this alert.
       );
   }
 
@@ -82,15 +82,15 @@ export class CatService {
         this.opts
       )
       .pipe(
-        delay(500),
+        delay(500), // just to play with RxJS and to show of the loading spiner (is that appropriate use of RxJS? :-))
         map((response) => ({ loading: false, response })),
         startWith({ loading: true, response: [] }),
-        catchError((e) => of(alert(e)))
+        catchError((e: Error) => of(alert(e.message)))
       );
   }
 }
 
 // In a bigger project I would probably build an api service that could handle all the CRUD operations.
 // I didn't dive deep into error handling in Angular but saw there is a class ErrorHandler where you should implement
-// handleError(). There I should probably call the logger, and notify the user. Of course alert() is not used for
+// handleError(). There I should probably call a logger, and notify the user. Of course alert() is not used for
 // this in real situations.

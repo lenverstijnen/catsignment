@@ -55,5 +55,4 @@ export class SubscribeComponent {
 }
 
 // Of course this form doesn't do anything usefull, but i implemented a Reactive
-// Form and added some validation. Everything could be better and more proffessional of
-// course. I really like the fact that all of this works out of the box in Angular.
+// Form and added some validation. I really like the fact that all of this works out of the box in Angular.
