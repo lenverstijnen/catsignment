@@ -12,7 +12,7 @@ import { SpinnerComponent } from './spinner.component';
 // I left this broken/unfinished code here so you can see the intentions I had.
 
 describe('SpinnerComponent', () => {
-
+  it('should be rendered if loading is true', async () => {
     await render(SpinnerComponent, {
       componentProperties: { loading: true },
     });
